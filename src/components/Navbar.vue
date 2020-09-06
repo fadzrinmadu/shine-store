@@ -2,23 +2,25 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-light bg-white py-3 fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><b>Shine Shop</b></a>
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo.svg" alt="shine shop logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item mx-md-3 active">
+            <li class="nav-item mr-md-4">
               <router-link class="nav-link" exact to="/">Home <span class="sr-only">(current)</span></router-link>
             </li>
-            <li class="nav-item mx-md-3">
-              <router-link class="nav-link" exact to="/products">Products</router-link>
+            <li class="nav-item mx-md-4">
+              <router-link class="nav-link" exact to="/products">Shop</router-link>
             </li>
-            <li class="nav-item mx-md-3">
-              <router-link class="nav-link" exact to="/features">Features</router-link>
+            <li class="nav-item mx-md-4">
+              <router-link class="nav-link" exact to="/features">Blog</router-link>
             </li>
-            <li class="nav-item mx-md-3">
+            <li class="nav-item ml-md-4">
               <router-link class="nav-link" exact to="#">Contact</router-link>
             </li>
           </ul>
@@ -67,7 +69,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.nav-item.active {
-  font-weight: bold;
+.nav-link {
+  color: #1B2437 !important;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+
+  &.router-link-active {
+    text-decoration: line-through;
+  }
 }
 </style>
